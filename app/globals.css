@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 39 50% 90%;
+    --foreground: 27 20% 24%;
+    --card: 0 0% 100%;
+    --card-foreground: 27 20% 24%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 27 20% 24%;
+    --primary: 9 78% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 39 90% 65%;
+    --secondary-foreground: 27 20% 24%;
+    --muted: 39 30% 85%;
+    --muted-foreground: 27 10% 40%;
+    --accent: 150 40% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 9 60% 55%;
+    --input: 9 60% 55%;
+    --ring: 9 78% 60%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 27 20% 14%;
+    --foreground: 39 30% 85%;
+    --card: 27 20% 14%;
+    --card-foreground: 39 30% 85%;
+    --popover: 27 20% 14%;
+    --popover-foreground: 39 30% 85%;
+    --primary: 9 78% 60%;
+    --primary-foreground: 27 20% 14%;
+    --secondary: 27 20% 24%;
+    --secondary-foreground: 39 30% 85%;
+    --muted: 27 20% 24%;
+    --muted-foreground: 39 20% 65%;
+    --accent: 150 40% 55%;
+    --accent-foreground: 27 20% 14%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 39 30% 85%;
+    --border: 27 20% 24%;
+    --input: 27 20% 24%;
+    --ring: 9 78% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .clay-card {
+    position: relative;
+    transform-style: preserve-3d;
+  }
+
+  .clay-button {
+    position: relative;
+    transform: translateY(-2px);
+    transition: transform 0.2s;
+  }
+
+  .clay-button:active {
+    transform: translateY(0);
+  }
+
+  .clay-avatar {
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .clay-icon {
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .clay-album {
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .clay-image {
+    position: relative;
+  }
+
+  .clay-music-player {
+    position: relative;
+  }
+
+  .clay-progress {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .clay-knob {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .clay-event {
+    position: relative;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
+  }
+}
