@@ -1,4 +1,3 @@
-import { Bell, Home, MessageCircleIcon as Message, Search, Users, Menu} from "lucide-react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -33,65 +32,81 @@ export function Header() {
     <>
       <header className="sticky top-0 z-50 bg-[#e06b53] text-white shadow-[0_8px_0_#c45544,0_10px_15px_rgba(0,0,0,0.2)]">
         <div className="container mx-auto flex items-center justify-between p-3">
-          <div className="flex items-center gap-2">
+          {/* Logo */}
+          <div className="flex items-center gap-2 flex-shrink-0">
             <div className="text-2xl font-bold tracking-tight">ClayPals</div>
-            <div className="relative ml-4 hidden md:block">
-              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 transform text-[#e06b53]" />
+          </div>
+          
+          {/* Search - Fixed width and centered on medium screens and up */}
+          <div className="hidden md:block w-[350px] max-w-full mx-auto">
+            <div className="relative">
               <Input
                 placeholder={`Search ClayPals... (${searchCount})`}
-                className="w-[250px] rounded-full bg-white/90 pl-9 text-[#4a3c31] border-4 border-[#c45544] shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]"
+                className="w-full h-10 rounded-full bg-white/90 pl-10 text-[#4a3c31] border-4 border-[#c45544] shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]"
                 onClick={handleSearchClick}
               />
             </div>
           </div>
 
-          <div className="hidden md:flex items-center space-x-1">
+          {/* Nav buttons - desktop */}
+          <div className="hidden md:flex items-center space-x-1 gap-4 flex-shrink-0">
             <Button 
               variant="ghost" 
-              size="icon" 
-              className="rounded-full hover:bg-[#f27d66] clay-button"
+              className="flex items-center gap-3 rounded-lg p-2 hover:bg-[#f27d66] transition-colors"
               onClick={() => setComingSoonDialogOpen(true)}
             >
-              <Home className="h-6 w-6" />
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f27d66] border-4 border-[#c45544] text-white">
+                <span role="img" aria-label="Home" className="text-3xl">🏠</span>
+              </span>
+              <span className="text-white">Home</span>
             </Button>
             <Button 
               variant="ghost" 
-              size="icon" 
-              className="rounded-full hover:bg-[#f27d66] clay-button"
+              className="flex items-center gap-3 rounded-lg p-2 hover:bg-[#f27d66] transition-colors"
               onClick={() => setComingSoonDialogOpen(true)}
             >
-              <Users className="h-6 w-6" />
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f27d66] border-4 border-[#c45544] text-white">
+                <span role="img" aria-label="Users" className="text-3xl">👥</span>
+              </span>
+              <span className="text-white">Users</span>
             </Button>
             <Button 
               variant="ghost" 
-              size="icon" 
-              className="rounded-full hover:bg-[#f27d66] clay-button"
+              className="flex items-center gap-3 rounded-lg p-2 hover:bg-[#f27d66] transition-colors"
               onClick={() => setMessageDialogOpen(true)}
             >
-              <Message className="h-6 w-6" />
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f27d66] border-4 border-[#c45544] text-white">
+                <span role="img" aria-label="Messages" className="text-3xl">💬</span>
+              </span>
+              <span className="text-white">Messages</span>
             </Button>
             <Button 
               variant="ghost" 
-              size="icon" 
-              className="rounded-full hover:bg-[#f27d66] clay-button"
+              className="flex items-center gap-3 rounded-lg p-2 hover:bg-[#f27d66] transition-colors"
               onClick={() => setComingSoonDialogOpen(true)}
             >
-              <Bell className="h-6 w-6" />
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f27d66] border-4 border-[#c45544] text-white">
+                <span role="img" aria-label="Notifications" className="text-3xl">🔔</span>
+              </span>
+              <span className="text-white">Notifications</span>
             </Button>
           </div>
 
-          <div className="flex items-center gap-2">
+          {/* User avatar and mobile menu */}
+          <div className="flex items-center gap-2 flex-shrink-0">
             <Avatar className="h-10 w-10 border-4 border-[#c45544] clay-avatar">
               <AvatarImage src="/avator.svg" alt="User" />
               <AvatarFallback className="bg-[#f8c156]">CP</AvatarFallback>
             </Avatar>
             <Button 
               variant="ghost" 
-              size="icon" 
-              className="md:hidden rounded-full hover:bg-[#f27d66] clay-button"
+              className="md:hidden flex items-center gap-3 rounded-lg p-2 hover:bg-[#f27d66] transition-colors"
               onClick={() => setComingSoonDialogOpen(true)}
             >
-              <Menu className="h-6 w-6" />
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f27d66] border-4 border-[#c45544] text-white">
+                <span role="img" aria-label="Menu" className="text-3xl">☰</span>
+              </span>
+              <span className="text-white">Menu</span>
             </Button>
           </div>
         </div>
