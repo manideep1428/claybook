@@ -34,7 +34,7 @@ export function Header() {
         <div className="container mx-auto flex items-center justify-between p-3">
           {/* Logo */}
           <div className="flex items-center gap-2 flex-shrink-0">
-            <div className="text-2xl font-bold tracking-tight">ClayPals</div>
+            <div className="text-2xl font-bold tracking-tight">ClayBook</div>
           </div>
           
           {/* Search - Fixed width and centered on medium screens and up */}
@@ -56,7 +56,7 @@ export function Header() {
               onClick={() => setComingSoonDialogOpen(true)}
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f27d66] border-4 border-[#c45544] text-white">
-                <span role="img" aria-label="Home" className="text-3xl">🏠</span>
+                <span role="img" aria-label="Home" className="text-xl">🏠</span>
               </span>
               <span className="text-white">Home</span>
             </Button>
@@ -66,7 +66,7 @@ export function Header() {
               onClick={() => setComingSoonDialogOpen(true)}
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f27d66] border-4 border-[#c45544] text-white">
-                <span role="img" aria-label="Users" className="text-3xl">👥</span>
+                <span role="img" aria-label="Users" className="text-xl">👥</span>
               </span>
               <span className="text-white">Users</span>
             </Button>
@@ -76,7 +76,7 @@ export function Header() {
               onClick={() => setMessageDialogOpen(true)}
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f27d66] border-4 border-[#c45544] text-white">
-                <span role="img" aria-label="Messages" className="text-3xl">💬</span>
+                <span role="img" aria-label="Messages" className="text-xl">💬</span>
               </span>
               <span className="text-white">Messages</span>
             </Button>
@@ -86,7 +86,7 @@ export function Header() {
               onClick={() => setComingSoonDialogOpen(true)}
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f27d66] border-4 border-[#c45544] text-white">
-                <span role="img" aria-label="Notifications" className="text-3xl">🔔</span>
+                <span role="img" aria-label="Notifications" className="text-xl">🔔</span>
               </span>
               <span className="text-white">Notifications</span>
             </Button>

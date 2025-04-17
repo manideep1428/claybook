@@ -12,31 +12,31 @@ export function LeftSidebar() {
         <div className="rounded-xl bg-[#5dae8b] p-5 shadow-[0_8px_0_#4a8c70,0_10px_15px_rgba(0,0,0,0.2)] border-4 border-[#4a8c70] clay-card">
           <div className="space-y-4">
             <UserProfile />
-            <Link href="#" className="flex items-center gap-3 rounded-lg p-2 hover:bg-[#6ec19e] transition-colors">
+            <Link href="/friends" className="flex items-center gap-3 rounded-lg p-2 hover:bg-[#6ec19e] transition-colors">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#6ec19e] border-4 border-[#4a8c70] text-white">
                 👥
               </span>
               <span className="text-white">Friends</span>
             </Link>
-            <Link href="#" className="flex items-center gap-3 rounded-lg p-2 hover:bg-[#6ec19e] transition-colors">
+            <Link href="/photos" className="flex items-center gap-3 rounded-lg p-2 hover:bg-[#6ec19e] transition-colors">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#6ec19e] border-4 border-[#4a8c70] text-white">
                 🖼️
               </span>
               <span className="text-white">Photos</span>
             </Link>
-            <Link href="#" className="flex items-center gap-3 rounded-lg p-2 hover:bg-[#6ec19e] transition-colors">
+            <Link href="/events" className="flex items-center gap-3 rounded-lg p-2 hover:bg-[#6ec19e] transition-colors">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#6ec19e] border-4 border-[#4a8c70] text-white">
                 📆
               </span>
               <span className="text-white">Events</span>
             </Link>
-            <Link href="#" className="flex items-center gap-3 rounded-lg p-2 hover:bg-[#6ec19e] transition-colors">
+            <Link href="/games" className="flex items-center gap-3 rounded-lg p-2 hover:bg-[#6ec19e] transition-colors">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#6ec19e] border-4 border-[#4a8c70] text-white">
                 🎮
               </span>
               <span className="text-white">Games</span>
             </Link>
-            <Link href="#" className="flex items-center gap-3 rounded-lg p-2 hover:bg-[#6ec19e] transition-colors">
+            <Link href="/saved" className="flex items-center gap-3 rounded-lg p-2 hover:bg-[#6ec19e] transition-colors">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#6ec19e] border-4 border-[#4a8c70] text-white">
                 📁
               </span>
